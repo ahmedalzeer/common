@@ -181,4 +181,10 @@ class StudentRecordController extends Controller
         return back()->with('flash_success', __('msg.del_ok'));
     }
 
+    public function getAllSudentsForClass($class_id)
+    {
+        $d['class_students'] = $this->my_class->getAllSudents($class_id);
+        dd($d);
+        return view('pages.support_team.classes.show', $d);
+    }
 }

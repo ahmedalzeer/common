@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\ClassType;
 use App\Models\MyClass;
 use App\Models\Section;
+use App\Models\StudentRecord;
 use App\Models\Subject;
 
 class MyClassRepo
@@ -139,4 +140,10 @@ class MyClassRepo
         return Subject::orderBy('name', 'asc')->with(['my_class', 'teacher'])->get();
     }
 
+    /************* Student *******************/
+
+    public function getAllSudents($class_id)
+    {
+        return MyClass::with(['student_record', 'user', 'section'])->get();
+    }
 }
