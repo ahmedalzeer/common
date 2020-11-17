@@ -103,4 +103,5 @@ Your Contributions & suggestions are welcomed.
 If you discover a security vulnerability within LAVSMS, please use pull request. All security vulnerabilities will be promptly addressed.
 
 ### **Contact [Ahmed Alzeer]**
-- Phone : +201015258850
+- Phone : +201015258850 / +966548112421
+- WhatsApp : +966548112421
