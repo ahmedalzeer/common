@@ -358,8 +358,12 @@ class Qs
         return self::goToRoute($to)->with('flash_success', $msg);
     }
 
-    public static function getDaysOfTheWeek()
+    public static function getDaysOfTheWeek($type = null)
     {
+        if ($type == 'muslim')
+        {
+            return ['Saturday', 'Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+        }
         return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     }
 

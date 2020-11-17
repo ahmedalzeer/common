@@ -86,9 +86,10 @@
                                     <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Term</label>
                                     <div class="col-lg-9">
                                         <select data-placeholder="Select Teacher" class="form-control select-search" name="term" id="term">
-                                            <option {{ old('term') == 1 ? 'selected' : '' }} value="1">First Term</option>
-                                            <option {{ old('term') == 2 ? 'selected' : '' }} value="2">Second Term</option>
-                                            <option {{ old('term') == 3 ? 'selected' : '' }} value="3">Third Term</option>
+                                            <option {{ old('term') == 1 ? 'selected' : '' }} value="1">Preliminary Exam</option>
+                                            <option {{ old('term') == 2 ? 'selected' : '' }} value="2">First Term</option>
+                                            <option {{ old('term') == 3 ? 'selected' : '' }} value="3">Second Term</option>
+                                            <option {{ old('term') == 4 ? 'selected' : '' }} value="4">Third Term</option>
                                         </select>
                                     </div>
                                 </div>

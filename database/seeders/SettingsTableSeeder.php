@@ -16,11 +16,11 @@ class SettingsTableSeeder extends Seeder
         DB::table('settings')->delete();
 
         $data = [
-            ['type' => 'current_session', 'description' => '2018-2019'],
+            ['type' => 'current_session', 'description' => '2020-2021'],
             ['type' => 'system_title', 'description' => 'AZIA'],
             ['type' => 'system_name', 'description' => 'Ahmed Alzeer ACADEMY'],
-            ['type' => 'term_ends', 'description' => '7/10/2018'],
-            ['type' => 'term_begins', 'description' => '7/10/2018'],
+            ['type' => 'term_ends', 'description' => '7/10/2020'],
+            ['type' => 'term_begins', 'description' => '7/10/2021'],
             ['type' => 'phone', 'description' => ''],
             ['type' => 'address', 'description' => ''],
             ['type' => 'system_email', 'description' => ''],
