@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::delete('promotion/reset_all', 'PromotionController@reset_all')->name('students.promotion_reset_all');
             Route::get('promotion/{fc?}/{fs?}/{tc?}/{ts?}', 'PromotionController@promotion')->name('students.promotion');
             Route::post('promote/{fc}/{fs}/{tc}/{ts}', 'PromotionController@promote')->name('students.promote');
-            Route::get('/test/{class_id}', 'StudentRecordController@getAllSudentsForClass');
+            Route::get('/show/{class_id}', 'StudentRecordController@getAllSudentsForClass')->name('class.students');
 
         });
 

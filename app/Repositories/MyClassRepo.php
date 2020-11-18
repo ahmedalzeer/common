@@ -144,6 +144,6 @@ class MyClassRepo
 
     public function getAllSudents($class_id)
     {
-        return MyClass::with(['student_record', 'user', 'section'])->get();
+        return StudentRecord::with(['my_class', 'user', 'section.teacher'])->where('my_class_id', $class_id)->get();
     }
 }

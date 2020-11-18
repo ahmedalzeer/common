@@ -41,6 +41,7 @@
                                                 <div class="dropdown-menu dropdown-menu-left">
                                                     @if(Qs::userIsTeamSA())
                                                     {{--Edit--}}
+                                                    <a href="{{route('class.students', $c->id)}}" class="dropdown-item"><i class="icon-eye"></i> View Class</a>
                                                     <a href="{{ route('classes.edit', $c->id) }}" class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
                                                    @endif
                                                         @if(Qs::userIsSuperAdmin())
