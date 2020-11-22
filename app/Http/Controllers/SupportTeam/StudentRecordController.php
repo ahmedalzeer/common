@@ -183,8 +183,9 @@ class StudentRecordController extends Controller
 
     public function getAllSudentsForClass($class_id)
     {
-        $d['class_students'] = $this->my_class->getAllSudents($class_id);
-//        dd($d);
-        return view('pages.support_team.classes.show', $d);
+        $class_students = $this->my_class->getAllSudents($class_id);
+        if (!count($class_students))
+            return back()->with('pop_error', __('msg.rnf'));;
+        return view('pages.support_team.classes.show', compact('class_students'));
     }
 }
