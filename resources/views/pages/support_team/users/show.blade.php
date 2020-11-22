@@ -26,66 +26,66 @@
                             <table class="table table-bordered">
                                 <tbody>
                                 <tr>
-                                    <td class="font-weight-bold">Name</td>
+                                    <td class="font-weight-bold">@lang('app.name')</td>
                                     <td>{{ $user->name }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="font-weight-bold">Gender</td>
+                                    <td class="font-weight-bold">@lang('app.gender')</td>
                                     <td>{{ $user->gender }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="font-weight-bold">Address</td>
+                                    <td class="font-weight-bold">@lang('app.address')</td>
                                     <td>{{ $user->address }}</td>
                                 </tr>
                                 @if($user->email)
                                     <tr>
-                                        <td class="font-weight-bold">Email</td>
+                                        <td class="font-weight-bold">@lang('app.email')</td>
                                         <td>{{$user->email }}</td>
                                     </tr>
                                 @endif
                                 @if($user->username)
                                     <tr>
-                                        <td class="font-weight-bold">Username</td>
+                                        <td class="font-weight-bold">@lang('app.username')</td>
                                         <td>{{$user->username }}</td>
                                     </tr>
                                 @endif
                                 @if($user->phone)
                                     <tr>
-                                        <td class="font-weight-bold">Phone</td>
+                                        <td class="font-weight-bold">@lang('app.phone')</td>
                                         <td>{{$user->phone.' '.$user->phone2 }}</td>
                                     </tr>
                                 @endif
                                 <tr>
-                                    <td class="font-weight-bold">Birthday</td>
+                                    <td class="font-weight-bold">@lang('app.birthday')</td>
                                     <td>{{$user->dob }}</td>
                                 </tr>
                                 @if($user->bg_id)
                                     <tr>
-                                        <td class="font-weight-bold">Blood Group</td>
+                                        <td class="font-weight-bold">@lang('app.blood_group')</td>
                                         <td>{{$user->blood_group->name }}</td>
                                     </tr>
                                 @endif
                                 @if($user->nal_id)
                                     <tr>
-                                        <td class="font-weight-bold">Nationality</td>
+                                        <td class="font-weight-bold">@lang('app.nationality')</td>
                                         <td>{{$user->nationality->name }}</td>
                                     </tr>
                                 @endif
                                 @if($user->state_id)
                                     <tr>
-                                        <td class="font-weight-bold">State</td>
+                                        <td class="font-weight-bold">@lang('app.state')</td>
                                         <td>{{$user->state->name }}</td>
                                     </tr>
                                 @endif
                                 @if($user->lga_id)
                                     <tr>
-                                        <td class="font-weight-bold">LGA</td>
+                                        <td class="font-weight-bold">@lang('app.lga')</td>
                                         <td>{{$user->lga->name }}</td>
                                     </tr>
                                 @endif
                                 @if($user->user_type == 'parent')
                                     <tr>
-                                        <td class="font-weight-bold">Children/Ward</td>
+                                        <td class="font-weight-bold">@lang('app.children/ward')</td>
                                         <td>
                                         @foreach(Qs::findMyChildren($user->id) as $sr)
                                             <span> - <a href="{{ route('students.show', Qs::hash($sr->id)) }}">{{ $sr->user->name.' - '.$sr->my_class->name. ' '.$sr->section->name }}</a></span><br>
@@ -97,7 +97,7 @@
 
                                 @if($user->user_type == 'teacher')
                                     <tr>
-                                        <td class="font-weight-bold">My Subjects</td>
+                                        <td class="font-weight-bold">@lang('app.my_subjects')</td>
                                         <td>
                                             @foreach(Qs::findTeacherSubjects($user->id) as $sub)
                                                 <span> - {{ $sub->name.' ('.$sub->my_class->name.')' }}</span><br>

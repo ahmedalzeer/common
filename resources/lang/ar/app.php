@@ -9,7 +9,8 @@ return [
     'edit'                              => 'تحرير',
     'add-category'                      => 'اضافة قسم',
     'categories'                        => 'الاقسام',
-
+    'account_settings'                  => 'اعدادت الحساب',
+    'profile'                           => 'الصفحة الشخصية',
 
     'ar'   => [
         'name'                          => 'الاسم باللغه العربيه',

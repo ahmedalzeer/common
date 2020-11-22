@@ -2,18 +2,18 @@
     <div class="text-center d-lg-none w-100">
         <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
             <i class="icon-unfold mr-2"></i>
-            More Links
+            @lang('app.more_links')
         </button>
     </div>
 
     <div class="navbar-collapse collapse" id="navbar-footer">
 					<span class="navbar-text">
-						&copy; {{ date('Y') }}. <a href="#">{{ Qs::getSystemName() }}</a> by <a href="#" >Ahmed Alzeer</a>
+						&copy; {{ date('Y') }}. <a href="#">{{ Qs::getSystemName() }}</a> by <a href="#" >@lang('app.ahmed_alzeer')</a>
 					</span>
 
         <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item"><a href="{{ route('privacy_policy') }}" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> Privacy Policy</a></li>
-            <li class="nav-item"><a href="{{ route('terms_of_use') }}" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Terms of Use </a></li>
+            <li class="nav-item"><a href="{{ route('privacy_policy') }}" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> @lang('app.privacy_policy')</a></li>
+            <li class="nav-item"><a href="{{ route('terms_of_use') }}" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> @lang('app.terms_of_use') </a></li>
 {{--            <li class="nav-item"><a href="#" class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i class="icon-phone mr-2"></i> Contact Us</span></a></li>--}}
         </ul>
     </div>
