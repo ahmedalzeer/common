@@ -14,7 +14,7 @@
                 <table class="table table-responsive table-striped">
                     <thead>
                     <tr>
-                        <th rowspan="2">Time <i class="icon-arrow-right7 ml-2"></i> <br> Date<i class="icon-arrow-down7 ml-2"></i>
+                        <th rowspan="2">Time <i class="icon-arrow-right7 ml-2"></i> <br> @lang('app.date')<i class="icon-arrow-down7 ml-2"></i>
                         </th>
                         @foreach($time_slots as $tms)
                             <th rowspan="2">{{ $tms->time_from }} <br>
@@ -40,7 +40,7 @@
                 </table>
                 {{--Print Button--}}
                 <div class="text-center mt-4">
-                    <a target="_blank" href="{{ route('ttr.print', $ttr->id) }}" class="btn btn-danger btn-lg"><i class="icon-printer mr-2"></i> Print Timetable</a>
+                    <a target="_blank" href="{{ route('ttr.print', $ttr->id) }}" class="btn btn-danger btn-lg"><i class="icon-printer mr-2"></i> @lang('app.print_timetable')</a>
                 </div>
             </div>
         </div>

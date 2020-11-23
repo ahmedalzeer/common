@@ -4,7 +4,7 @@
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Edit TimeTable Record</h6>
+            <h6 class="card-title">@lang('app.edit_timeTable_record')</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -13,7 +13,7 @@
                 <form class="ajax-update" method="post" action="{{ route('ttr.update', $ttr->id) }}">
                     @csrf @method('PUT')
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
+                        <label class="col-lg-3 col-form-label font-weight-semibold">@lang('app.name') <span class="text-danger">*</span></label>
                         <div class="col-lg-9">
                             <input name="name" value="{{ $ttr->name }}" required type="text" class="form-control" placeholder="Name of TimeTable">
                         </div>
@@ -31,10 +31,10 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">Type (Class or Exam)</label>
+                        <label for="exam_id" class="col-lg-3 col-form-label font-weight-semibold">@lang('app.type_class_or_exam')</label>
                         <div class="col-lg-9">
                             <select class="select form-control" name="exam_id" id="exam_id">
-                                <option value="">Class Timetable</option>
+                                <option value="">@lang('app.class_timetable')</option>
                                 @foreach($exams as $ex)
                                     <option {{ $ttr->exam_id == $ex->id ? 'selected' : '' }} value="{{ $ex->id }}">{{ $ex->name }}</option>
                                 @endforeach
@@ -44,7 +44,7 @@
 
 
                     <div class="text-right">
-                        <button id="ajax-btn" type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                        <button id="ajax-btn" type="submit" class="btn btn-primary">@lang('app.submit_form') <i class="icon-paperplane ml-2"></i></button>
                     </div>
                 </form>
 
